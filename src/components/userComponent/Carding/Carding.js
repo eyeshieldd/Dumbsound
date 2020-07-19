@@ -1,18 +1,26 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import "./CardMovie.css";
-import playIcon from '../../../images/iconplay.png';
+import playIcon from "../../../images/iconplay.png";
 
-
-const Carding = ({ music: { id, title, year, thumbnail, artist: { name } }, setPlayIndex,
+const Carding = ({
+  music: {
+    id,
+    title,
+    year,
+    thumbnail,
+    artist: { name },
+  },
+  setPlayIndex,
   index,
-  playIndex }) => {
+  playIndex,
+}) => {
   const text_truncate = (str, length, ending) => {
     if (length == null) {
       length = 100;
     }
     if (ending == null) {
-      ending = '...';
+      ending = "...";
     }
     if (str.length > length) {
       return str.substring(0, length - ending.length) + ending;
@@ -22,13 +30,14 @@ const Carding = ({ music: { id, title, year, thumbnail, artist: { name } }, setP
   };
   return (
     <div className="card-backround">
-      <div className={`playIcon${index === playIndex ? ' current' : ' '}`}>
-      </div>
+      <div
+        className={`playIcon${index === playIndex ? " current" : " "}`}
+      ></div>
       <div>
         <img
           className="card"
-          src={`http://localhost:5000/uploads/${thumbnail}`}
-          style={{ height: 'auto' }}
+          src={`https://apidumbsound.herokuapp.com/uploads/${thumbnail}`}
+          style={{ height: "auto" }}
           onClick={() => setPlayIndex(index)}
         />
         <span className="movie-title">{text_truncate(title, 15)}</span>
@@ -37,7 +46,6 @@ const Carding = ({ music: { id, title, year, thumbnail, artist: { name } }, setP
       </div>
     </div>
   );
-
 };
 
 export default Carding;
