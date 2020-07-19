@@ -1,0 +1,130 @@
+.frame {
+	background-size: 100%, cover !important;
+	background-position: center, center !important;
+	width: 100%;
+	position: relative;
+	background-size: cover;
+}
+
+@keyframes animateframeimage {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.frame-content {
+	max-width: 1280px;
+	padding: 110px;
+	font-size: small;
+	margin: 0 auto;
+}
+
+.frame-text {
+	z-index: 100;
+	text-align: center;
+	margin-left: 220px;
+	max-width: 700px;
+	position: absolute;
+	top: 30%;
+	font-size: 200px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	min-height: 100px;
+	background: rgba(0, 0, 0, 0);
+	color: #ffffff;
+}
+
+.frame-text h1 {
+	font-family: "Abel", sans-serif;
+	font-size: 48px;
+	color: #fff;
+}
+
+.frame-text p {
+	font-family: "Abel", sans-serif;
+	font-size: 22px;
+	line-height: 26px;
+	color: #ffffff;
+}
+
+@media screen and (max-width: 720px) {
+	.frame-text {
+		max-width: 100%;
+	}
+
+	.frame-text h1 {
+		font-size: 38px;
+		color: #ffffff;
+	}
+
+	.frame-text p {
+		font-size: 16px;
+		line-height: 20px;
+		color: #ffffff;
+	}
+
+	.logoframe {
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+@media (min-width: 480px) {
+	.frame {
+		height: 600px;
+	}
+}
+
+@media (min-width: 1366px) {
+	.frame {
+		height: 768px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.frame {
+		height: 800px;
+	}
+}
+
+@media (min-width: 1800px) {
+	.frame {
+		height: 918px;
+	}
+}
+
+.frame-button {
+	position: absolute;
+	width: 800px;
+	height: 50px;
+	font-size: 1.7rem;
+	background: #900c3f;
+	border: 1px solid #900c3f;
+	border-radius: 5px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.frame-button:hover {
+	background: #6d094f;
+	border: 1px solid #8b040b;
+}
+
+.logoframe {
+	width: auto;
+	height: auto;
+	left: 150px;
+	top: 202px;
+}
+
+.year {
+	padding-right: 10px;
+}
+
+.tipe {
+	border: 1px solid #ffffff;
+	padding: 5px 5px;
+	border-radius: 5px;
+}
